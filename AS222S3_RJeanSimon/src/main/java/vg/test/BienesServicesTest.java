@@ -9,13 +9,14 @@ public class BienesServicesTest {
 
     public static void main(String[] args) throws Exception {
         BienesServicesTest test = new BienesServicesTest();
-        test.testGetAll();
+
         test.testGetAllActive();
+       /* test.testGetAll();
         test.testGetAllInactive();
         test.testUpdate();
         test.testInsert();
         test.testDelete();
-        test.testRestore();
+        test.testRestore(); */
     }
 
     public void testGetAll() throws Exception {

@@ -10,9 +10,9 @@ public class AccesoDB {
     public static Connection conectar() throws Exception {
         try {
             String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
-            String url = "jdbc:sqlserver://localhost:14033;databaseName=H232_RJeanSimon;encrypt=true;TrustServerCertificate=True;";
+            String url = "jdbc:sqlserver://localhost:1433;databaseName=H232_RJeanSimon;encrypt=true;TrustServerCertificate=True;";
             String user = "sa";
-            String pwd = "MyPassword2023";
+            String pwd = "jeansimon16";
 
             Class.forName(driver);
             cnx = DriverManager.getConnection(url, user, pwd);

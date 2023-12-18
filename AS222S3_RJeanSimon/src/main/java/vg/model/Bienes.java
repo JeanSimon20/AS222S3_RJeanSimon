@@ -2,6 +2,8 @@ package vg.model;
 
 public class Bienes {
     private Integer bienesid;
+    private Integer personid;
+    private Integer areaid;
     private String cantidad;
     private String code;
     private String detalle;
@@ -13,6 +15,10 @@ public class Bienes {
     private String depreciacion_acumulada;
     private String status;
 
+    private String personName;
+
+    private String areaName;
+
     public Bienes() {
     }
 
@@ -20,6 +26,8 @@ public class Bienes {
     public String toString() {
         return "Bienes{" +
                 "bienesid=" + bienesid +
+                ", personid=" + personid +
+                ", areaid=" + areaid +
                 ", cantidad='" + cantidad + '\'' +
                 ", code='" + code + '\'' +
                 ", detalle='" + detalle + '\'' +
@@ -30,11 +38,15 @@ public class Bienes {
                 ", depreciacion_mensual='" + depreciacion_mensual + '\'' +
                 ", depreciacion_acumulada='" + depreciacion_acumulada + '\'' +
                 ", status='" + status + '\'' +
+                ", personName='" + personName + '\'' +
+                ", areaName='" + areaName + '\'' +
                 '}';
     }
 
-    public Bienes(Integer bienesid, String cantidad, String code, String detalle, String valorlibro, String fecha_ingreso, String fecha_depreciacion, String depreciacion_anual, String depreciacion_mensual, String depreciacion_acumulada, String status) {
+    public Bienes(Integer bienesid, Integer personid, Integer areaid, String personName, String areaName,String cantidad, String code, String detalle, String valorlibro, String fecha_ingreso, String fecha_depreciacion, String depreciacion_anual, String depreciacion_mensual, String depreciacion_acumulada, String status) {
         this.bienesid = bienesid;
+        this.personid = personid;
+        this.areaid = areaid;
         this.cantidad = cantidad;
         this.code = code;
         this.detalle = detalle;
@@ -45,6 +57,24 @@ public class Bienes {
         this.depreciacion_mensual = depreciacion_mensual;
         this.depreciacion_acumulada = depreciacion_acumulada;
         this.status = status;
+        this.personName = personName;
+        this.areaName = areaName;
+    }
+
+    public String getPersonName() {
+        return personName;
+    }
+
+    public void setPersonName(String personName) {
+        this.personName = personName;
+    }
+
+    public String getAreaName() {
+        return areaName;
+    }
+
+    public void setAreaName(String areaName) {
+        this.areaName = areaName;
     }
 
     public Integer getBienesid() {
@@ -53,6 +83,22 @@ public class Bienes {
 
     public void setBienesid(Integer bienesid) {
         this.bienesid = bienesid;
+    }
+
+    public Integer getPersonid() {
+        return personid;
+    }
+
+    public void setPersonid(Integer personid) {
+        this.personid = personid;
+    }
+
+    public Integer getAreaid() {
+        return areaid;
+    }
+
+    public void setAreaid(Integer areaid) {
+        this.areaid = areaid;
     }
 
     public String getCantidad() {
