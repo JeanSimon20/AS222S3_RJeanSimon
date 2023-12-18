@@ -58,7 +58,7 @@ public class BienesService extends AccesoDB implements IBienesService{
     public List<Bienes> getAllActive() throws Exception {
         List<Bienes> listAllActive = new ArrayList<>();
         Bienes bienesDetail;
-        String sql = "SELECT B.bienesid, B.cantidad, B.code, B.detalle, B.valorlibro, B.fecha_ingreso, B.fecha_depreciacion, B.depreciacion_anual, B.depreciacion_mensual, B.status, " +
+        String sql = "SELECT B.bienesid, B.cantidad, B.code, B.detalle, B.valorlibro, B.fecha_ingreso, B.fecha_depreciacion, B.depreciacion_anual, B.depreciacion_mensual, B.depreciacion_acumulada, B.status, " +
                 "P.name AS personName, A.name AS areaName " +
                 "FROM BIENES B " +
                 "INNER JOIN PERSON P ON B.personid = P.personid " +
@@ -251,5 +251,10 @@ public class BienesService extends AccesoDB implements IBienesService{
         } finally {
             this.cerrar();
         }
+    }
+
+    @Override
+    public void getAllPeople() throws Exception {
+
     }
 }

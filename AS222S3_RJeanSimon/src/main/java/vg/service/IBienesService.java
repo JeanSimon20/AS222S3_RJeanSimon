@@ -21,4 +21,6 @@ public interface IBienesService {
 
     void restore(Bienes id) throws Exception;
 
+    void getAllPeople() throws Exception;
+
 }
